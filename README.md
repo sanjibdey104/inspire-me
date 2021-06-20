@@ -1,4 +1,4 @@
 # Inspire Me
 Random quote generator for inspiration
 
-### Live Link: inspire-me-quotes.netlify.app
+### catch it live:  [inspire me](inspire-me-quotes.netlify.app) 
