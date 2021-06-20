@@ -3,7 +3,7 @@ const author = document.querySelector('.author');
 const quoteFetchButton = document.querySelector('.quote-fetch-button');
 const loader = document.querySelector('#loader');
 
-
+window.addEventListener('DOMContentLoaded', () => fetchQuotes());
 quoteFetchButton.addEventListener('click', () => fetchQuotes());
 
 const fetchQuotes = async() => {
