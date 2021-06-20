@@ -1,0 +1,134 @@
+:root {
+    --primary-font: 'Cormorant Garamond', serif;
+    --secondary-font:  'Raleway', sans-serif;
+    --bg-dark: #121212;
+    --text-color: #ffffffda;
+    --light-shade: #4b4b4bbb;
+    --accent-color: #bb86fc;
+}
+
+html {
+  font-family: 100%;
+  box-sizing: border-box;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: var(--primary-font);
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+}
+
+a,button {
+  font-family: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header, .footer {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
+}
+
+.header::before, .footer::before {
+    content: "";
+    width: 12rem;
+    height: 0.1px;
+    background-color: var(--light-shade);
+    display: inline-block;
+    margin-right: 1rem;
+}
+  
+.header::after, .footer::after {
+    content: "";
+    width: 12rem;
+    height: 0.1px;
+    background-color: var(--light-shade);
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.main {
+  height: 10rem;
+  width: 70%;
+  
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  
+  display: grid;
+  place-content: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+  
+.quote::before {
+    content: open-quote;
+    color: inherit;
+    font-size: 2.3rem;
+    margin-right: 0.5rem;
+    transform: translateY(-50%);
+}
+  
+.quote::after {
+    content: close-quote;
+    color: inherit;
+    font-size: 2.3rem;
+    margin-right: 0.5rem;
+    transform: translateY(50%);
+}
+  
+.author {
+    margin-left: auto;
+}
+
+.quote-fetch-button {
+  background-color: var(--bg-dark);
+  color: var(--accent-color);
+  
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--light-shade);
+}
+
+
