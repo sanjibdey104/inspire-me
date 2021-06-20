@@ -1,10 +1,10 @@
 :root {
-    --primary-font: 'Cormorant Garamond', serif;
-    --secondary-font:  'Raleway', sans-serif;
-    --bg-dark: #121212;
-    --text-color: #ffffffda;
-    --light-shade: #4b4b4bbb;
-    --accent-color: #bb86fc;
+  --primary-font: 'Cormorant Garamond', serif;
+  --secondary-font:  'Raleway', sans-serif;
+  --bg-dark: #121212;
+  --text-color: #ffffffda;
+  --light-shade: #4b4b4bbb;
+  --accent-color: #bb86fc;
 }
 
 html {
@@ -58,6 +58,36 @@ button {
   position: relative;
 }
 
+#loader {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--accent-color);
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translatY(-50%);
+  border-radius: 50%;
+
+  transform: rotate(0deg);
+  animation: 1s linear 0s infinite spin;
+  
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loader.show {
+  display: block;
+}
+
 .header, .footer {
   font-size: 0.9rem;
   display: flex;
@@ -66,21 +96,21 @@ button {
 }
 
 .header::before, .footer::before {
-    content: "";
-    width: 12rem;
-    height: 0.1px;
-    background-color: var(--light-shade);
-    display: inline-block;
-    margin-right: 1rem;
+  content: "";
+  width: 12rem;
+  height: 0.1px;
+  background-color: var(--light-shade);
+  display: inline-block;
+  margin-right: 1rem;
 }
   
 .header::after, .footer::after {
-    content: "";
-    width: 12rem;
-    height: 0.1px;
-    background-color: var(--light-shade);
-    display: inline-block;
-    margin-left: 1rem;
+  content: "";
+  width: 12rem;
+  height: 0.1px;
+  background-color: var(--light-shade);
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 .main {
@@ -111,15 +141,15 @@ button {
 }
   
 .quote::after {
-    content: close-quote;
-    color: inherit;
-    font-size: 2.3rem;
-    margin-right: 0.5rem;
-    transform: translateY(50%);
+  content: close-quote;
+  color: inherit;
+  font-size: 2.3rem;
+  margin-right: 0.5rem;
+  transform: translateY(50%);
 }
   
 .author {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .quote-fetch-button {
